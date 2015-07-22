@@ -57,7 +57,7 @@ $animation-dur: 0.25s;
     text-decoration: none;
     @include transition(background-color $animation-dur);
     padding: 0.5em;
-    @include flex();
+    @include flexbox();
     @include align-items(center);
     @include justify-content(center);
     .navbar-text, &.navbar-text {
@@ -95,5 +95,4 @@ $animation-dur: 0.25s;
       border-bottom: 4px solid purple;
     }
   }
-}
 }
