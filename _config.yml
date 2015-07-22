@@ -1,0 +1,12 @@
+title: DTP
+tagline: Down to Party
+version: 0.1
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "global"
+sass:
+  sass_dir: _sass
+  style: :compressed

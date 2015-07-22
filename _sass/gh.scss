@@ -1,0 +1,57 @@
+---
+# Stylesheet for the global header (gh).
+---
+
+$text-color: white;
+$text-hover-color: black;
+$bg-color: #222;
+$bg-hover-color: #DDD;
+$animation-dur: 0.25s;
+
+#gh {
+  position: fixed;
+  background: $bg-color;
+}
+
+#navbar {
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    transition: background-color $animation-dur;
+    display: flex;
+    justify-content: center;
+    .navbar-text {
+      transition: color $animation-dur;
+    }
+    &:hover {
+      background: $bg-hover-color;
+      .navbar-text {
+        color: $text-hover-color;
+      }
+    }
+  }
+  .navbar-tab {
+    flex-grow: 1;
+    &:nth-of-type(6n+1) {
+      border-bottom: 4px solid red;
+    }
+    &:nth-of-type(6n+2) {
+      border-bottom: 4px solid yellow;
+    }
+    &:nth-of-type(6n+3) {
+      border-bottom: 4px solid lime;
+    }
+    &:nth-of-type(6n+4) {
+      border-bottom: 4px solid cyan;
+    }
+    &:nth-of-type(6n+5) {
+      border-bottom: 4px solid blue;
+    }
+    &:nth-of-type(6n) {
+      border-bottom: 4px solid purple;
+    }
+  }
+}
