@@ -23,6 +23,7 @@ $animation-dur: 0.25s;
     transition: background-color $animation-dur;
     padding: 0.25em;
     display: flex;
+    align-items: center;
     justify-content: center;
     .navbar-text, &.navbar-text {
       color: $text-color;
@@ -35,8 +36,8 @@ $animation-dur: 0.25s;
       }
     }
   }
-  .fa {
-    vertical-align: center;
+  .fa::after {
+    content: "&nbsp;"
   }
   .navbar-tab {
     flex-grow: 1;
