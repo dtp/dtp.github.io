@@ -4,6 +4,40 @@ $bg-color: #333;
 $bg-hover-color: #EEE;
 $animation-dur: 0.25s;
 
+@mixin transition($values) {
+  -webkit-transition: $values;
+  transition: $values;
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-flow($values) {
+  -webkit-flex-flow: $values;
+  flex-flow: $values;
+}
+
+@mixin align-items($values) {
+  -webkit-box-align: $values;
+  -webkit-align-items: $values;
+  align-items: $values;
+}
+
+@mixin justify-content($values) {
+  -webkit-box-pack: $values;
+  -webkit-justify-content: $values;
+  justify-content: $values;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -webkit-flex: $values;
+  flex: $values;
+}
+
 #gh {
   position: fixed;
   top: 0;
@@ -17,18 +51,18 @@ $animation-dur: 0.25s;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    display: flex;
+    @include flexbox():
   }
   a {
     text-decoration: none;
-    transition: background-color $animation-dur;
-    padding: 0.25em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include transition(background-color $animation-dur);
+    padding: 0.5em;
+    @include flex();
+    @include align-items(center);
+    @include justify-content(center);
     .navbar-text, &.navbar-text {
       color: $text-color;
-      transition: color $animation-dur;
+      @include transition(color $animation-dur);
     }
     &:hover {
       background: $bg-hover-color;
@@ -37,11 +71,11 @@ $animation-dur: 0.25s;
       }
     }
   }
-  .fa::after {
+  .fa:after {
     content: "\00A0"
   }
   .navbar-tab {
-    flex-grow: 1;
+    @include flex(1 1 auto);
     &:nth-of-type(6n+1) {
       border-bottom: 4px solid red;
     }
@@ -61,4 +95,5 @@ $animation-dur: 0.25s;
       border-bottom: 4px solid purple;
     }
   }
+}
 }
