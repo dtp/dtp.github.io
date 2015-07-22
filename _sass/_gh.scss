@@ -35,6 +35,9 @@ $animation-dur: 0.25s;
       }
     }
   }
+  .fa {
+    vertical-align: center;
+  }
   .navbar-tab {
     flex-grow: 1;
     &:nth-of-type(6n+1) {
