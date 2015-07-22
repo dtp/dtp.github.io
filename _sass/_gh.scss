@@ -51,7 +51,7 @@ $animation-dur: 0.25s;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    @include flexbox():
+    @include flexbox();
   }
   a {
     text-decoration: none;
