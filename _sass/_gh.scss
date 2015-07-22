@@ -1,22 +1,29 @@
 $text-color: white;
 $text-hover-color: black;
-$bg-color: #222;
-$bg-hover-color: #DDD;
+$bg-color: #333;
+$bg-hover-color: #EEE;
 $animation-dur: 0.25s;
 
 #gh {
   position: fixed;
+  top: 0;
+  width: 100%;
   background: $bg-color;
 }
 
 #navbar {
   ul {
+    margin: 0;
+    padding: 0;
+    height: 2.5em;
     list-style-type: none;
     display: flex;
   }
   a {
+    color: $text-color;
     text-decoration: none;
     transition: background-color $animation-dur;
+    padding: 0.25em;
     display: flex;
     justify-content: center;
     .navbar-text {
