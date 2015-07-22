@@ -37,7 +37,7 @@ $animation-dur: 0.25s;
     }
   }
   .fa::after {
-    content: "&nbsp;"
+    content: "\00A0"
   }
   .navbar-tab {
     flex-grow: 1;
