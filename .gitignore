@@ -1,2 +1,4 @@
-# Ignore SASS caches
+# SASS Caches
 .sass-cache
+# Jekyll Generated Files/Directories
+_site
