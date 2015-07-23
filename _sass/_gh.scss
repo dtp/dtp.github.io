@@ -76,6 +76,7 @@ $tab-colors: red, yellow, lime, cyan, blue, purple;
     content: "\00A0"
   }
   .navbar-tab {
+    @include flex(1 1 auto);
     @for $i from 1 through length($tab-colors) {
       &:nth-of-type(#{length($tab-colors)}n+#{$i}) {
         border-bottom: 6px solid nth($tab-colors, $i);
