@@ -3,6 +3,7 @@ $text-hover-color: black;
 $bg-color: #333;
 $bg-hover-color: #EEE;
 $animation-dur: 0.25s;
+$tab-colors: red, yellow, lime, cyan, blue, purple;
 
 @mixin transition($values) {
   -webkit-transition: $values;
@@ -75,24 +76,10 @@ $animation-dur: 0.25s;
     content: "\00A0"
   }
   .navbar-tab {
-    @include flex(1 1 auto);
-    &:nth-of-type(6n+1) {
-      border-bottom: 4px solid red;
-    }
-    &:nth-of-type(6n+2) {
-      border-bottom: 4px solid yellow;
-    }
-    &:nth-of-type(6n+3) {
-      border-bottom: 4px solid lime;
-    }
-    &:nth-of-type(6n+4) {
-      border-bottom: 4px solid cyan;
-    }
-    &:nth-of-type(6n+5) {
-      border-bottom: 4px solid blue;
-    }
-    &:nth-of-type(6n) {
-      border-bottom: 4px solid purple;
+    @for $i from 1 through length($tab-colors) {
+      &:nth-of-type(#{length($tab-colors)}n+#{$i}) {
+        border-bottom: 6px solid nth($tab-colors, $i);
+      }
     }
   }
 }
