@@ -5,6 +5,11 @@
   align-items: $alignment;
 }
 
+@mixin align-self {
+  -webkit-align-self: $alignment;
+  align-items: $alignment;
+}
+
 @mixin backdrop-filter($filters) {
   -webkit-backdrop-filter: $filters;
 }

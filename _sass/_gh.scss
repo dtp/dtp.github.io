@@ -18,11 +18,8 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
   margin: 0 auto;
   padding: 0.75em 1em;
   overflow: hidden;
-}
-
-#gh-top-wrapper {
-  @include flexbox(inline);
-  @include align-items(center);
+  @include flexbox;
+  @include justify-content(space-between);
 }
 
 #gh-dtp-logo {
@@ -31,7 +28,10 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 }
 
 #gh-search-form {
+  width: 50%;
   transition: $animation-duration;
+  @include flexbox(inline);
+  @include align-items(center);
 }
 
 .gh-search-form-focus {
@@ -42,29 +42,32 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
   background: rgba(255, 255, 255, 0.3);
   @include placeholder {
     color: white;
+    text-align: center;
   }
   transition: $animation-duration;
   height: 2em;
   border-radius: 2px;
   margin-left: 0.5em;
   padding: 0 0.5em;
+  @include flex(1 0 auto);
   &:focus {
     color: black;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 0 2px dodgerblue, inset 0 0 4px rgba(0, 0, 0, 0.5);
     @include placeholder {
       color: gray;
+      text-align: initial;
     }
   }
 }
 
 #nav-drawer-toggle {
+  align-self: flex-end;
   background-color: transparent;
   height: 2em;
   width: 2em;
   margin-left: 1em;
   padding: 0.5em;
-  float: right;
 }
 
 .nav-drawer-toggle-active {
