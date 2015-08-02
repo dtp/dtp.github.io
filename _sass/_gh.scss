@@ -25,9 +25,8 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
   @include align-items(center);
 }
 
-#dtp-logo {
-  font-size: 2em;
-  line-height: 1;
+#gh-dtp-logo {
+  height: 2em;
   margin-right: 1em;
 }
 
