@@ -1,0 +1,20 @@
+.dtp-button {
+  background-color: dodgerblue;
+  transition: $animation-duration;
+  border: 0;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0.5em;
+  outline: 0;
+}
+
+.dtp-button-active {
+  @include filter(brightness(1.25));
+}
+
+.dtp-text {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}

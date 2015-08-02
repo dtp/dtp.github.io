@@ -6,6 +6,7 @@ defaults:
     scope:
       path: ""
     values:
+      title: "DTP"
       layout: "global"
 sass:
   sass_dir: _sass

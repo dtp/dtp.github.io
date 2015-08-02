@@ -1,12 +1,34 @@
-<header id="gh">
-  <nav role="navigation" id="navbar">
-    <ul id="navbar-main">
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-home"></i>DTP</a></li>
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-shield"></i>Clans</a></li>
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-bomb"></i>Clan Wars</a></li>
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-info-circle"></i>Events</a></li>
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-line-chart"></i>Statistics</a></li>
-      <li class="navbar-tab"><a class="navbar-text" href="#"><i class="fa fa-wrench"></i> Tools</a></li>
-    </ul>
-  </nav>
+<header id="globalheader">
+  <div id="gh-wrapper">
+    <div id="gh-top-wrapper">
+      <a href="/" id="dtp-logo" class="dtp-logo">DTP</a>
+      <form action="/results" method="GET" id="gh-search-form">
+        <i class="fa fa-search"></i>
+        <input placeholder="Search" type="text" name="q" autocomplete="off" id="gh-search" class="dtp-text">
+      </form>
+    </div>
+    <button id="nav-drawer-toggle" class="dtp-button">
+      <svg height="100%" width="100%" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid">
+        <line x1="16" y1="0" x2="16" y2="32" stroke="white" stroke-width="4" />
+        <line x1="0" y1="16" x2="32" y2="16" stroke="white" stroke-width="4" />
+      </svg>
+    </button>
+  </div>
+  <div id="nav-drawer-wrapper" class="nav-drawer-closed">
+    <nav id="nav-drawer">
+      <a href="/" class="nav-link">
+        <div class="fa fa-home nav-link-icon">
+        </div><div class="nav-link-text">Home</div>
+      </a>
+      <a class="nav-link">
+        <div class="fa fa-gamepad nav-link-icon"></div>
+        <div class="nav-link-text">Games</div>
+      </a>
+      <a class="nav-link">
+        <div class="fa fa-info-circle nav-link-icon"></div>
+        <div class="nav-link-text">About Us</div>
+      </a>
+    </nav>
+  </div>
 </header>
+<div id="gh-spacer"></div>
