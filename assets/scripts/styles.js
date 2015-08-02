@@ -13,7 +13,7 @@ $(function() {
       height: 0,
       transformOrigin: "left top",
       paused: true,
-      ease: Back.easeOut.config(1.5),
+      ease: Back.easeOut.config(2),
       onReverseComplete: function() {
         $navDrawerWrapper.addClass('nav-drawer-closed')
       }
@@ -22,7 +22,7 @@ $(function() {
     $(this).toggleClass('nav-drawer-toggle-active');
     if ($navDrawerWrapper.hasClass('nav-drawer-closed')) {
       $navDrawerWrapper.removeClass('nav-drawer-closed');
-      navDrawerTransition.restart();
+      navDrawerTransition.play();
     } else {
       navDrawerTransition.reverse();
     }
