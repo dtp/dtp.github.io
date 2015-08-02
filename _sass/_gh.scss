@@ -1,22 +1,21 @@
-$gh-bg-color: rgba(63, 83, 95, 0.9);
-
 #globalheader {
   color: white;
-  font: 600 1em "Orbitron";
-  background-color: $gh-bg-color;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  font-family: "Orbitron", sans-serif;
+  background-color: $overlay-bg-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   @include backdrop-filter(blur(5px));
   width: 100%;
-  position: fixed;
   top: 0;
+  position: fixed;
+  z-index: 1000;
 }
 
 #gh-wrapper {
   height: 3.5em;
   max-width: 1200px;
+  overflow: hidden;
   margin: 0 auto;
   padding: 0.75em 1em;
-  overflow: hidden;
   @include flexbox;
   @include justify-content(space-between);
 }
@@ -27,7 +26,7 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 
 #gh-search-form {
   max-width: 50%;
-  padding: 0 1em;
+  padding: 0 2px; // To fix FA rendering outside content-box
   transition: $animation-duration;
   @include flexbox(inline);
   @include flex(1);
@@ -40,16 +39,16 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 
 #gh-search {
   background: rgba(255, 255, 255, 0.3);
+  height: 2em;
+  margin-left: 0.5em;
+  padding: 0 0.5em;
+  border-radius: $border-radius;
+  transition: $animation-duration;
+  @include flex(1);
   @include placeholder {
     color: white;
     text-align: center;
   }
-  transition: $animation-duration;
-  height: 2em;
-  border-radius: 2px;
-  margin-left: 0.5em;
-  padding: 0 0.5em;
-  @include flex(1);
   &:focus {
     color: black;
     background-color: rgba(255, 255, 255, 0.9);
@@ -62,7 +61,6 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 }
 
 #nav-drawer-toggle {
-  align-self: flex-end;
   background-color: transparent;
   height: 2em;
   width: 2em;
@@ -75,8 +73,8 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 }
 
 #nav-drawer-wrapper {
-  border-top: 2px solid darken($gh-bg-color, 0.4);
   overflow: hidden;
+  border-top: 2px solid darken($overlay-bg-color, 0.4);
 }
 
 .nav-drawer-closed {
@@ -86,24 +84,20 @@ $gh-bg-color: rgba(63, 83, 95, 0.9);
 #nav-drawer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1em;
   @include flexbox;
   @include flex-flow(row wrap);
   @include justify-content(space-around);
 }
 
 .nav-link {
+  color: inherit;
+  text-decoration: none;
   margin: 0.5em;
 }
 
-.nav-link {
-  color: inherit;
-  text-decoration: none;
-}
-
 #gh-dtp-logo, #gh-search-form, #nav-drawer-toggle, .nav-link {
-  transition: $animation-duration;
   opacity: 0.7;
+  transition: $animation-duration;
   &:hover {
     opacity: 1;
   }

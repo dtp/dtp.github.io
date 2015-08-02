@@ -8,7 +8,7 @@ $(function() {
 
   // Nav Drawer
   var $navDrawerWrapper = $('#nav-drawer-wrapper');
-  var navDrawerTransition = TweenMax.from($navDrawerWrapper, 0.2,
+  var navDrawerTransition = TweenMax.from($navDrawerWrapper, .2,
     {
       height: 0,
       transformOrigin: "left top",
