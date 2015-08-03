@@ -11,7 +11,6 @@ $(function() {
   var navDrawerTransition = TweenMax.from($navDrawerWrapper, .2,
     {
       height: 0,
-      transformOrigin: "left top",
       paused: true,
       ease: Back.easeOut.config(2),
       onReverseComplete: function() {
